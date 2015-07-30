@@ -7,6 +7,8 @@
 
     <xs:element name="datasets" type="DatasetsType" />
 
+    <xs:element name="dataset" type="DatasetType" />
+
     <!--
         Datasets type.
     -->
