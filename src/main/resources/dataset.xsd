@@ -23,31 +23,15 @@
     -->
     <xs:complexType name="DatasetType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
-            <xs:element name="children" type="ChildrenType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="dataType" type="xs:string" />
+            <xs:element name="url" type="xs:anyURI" />
+            <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="qualityAssured" type="qualityEnum" minOccurs="1" maxOccurs="1" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required" />
         <xs:attribute name="created" type="xs:dateTime" use="required" />
         <xs:attribute name="updated" type="xs:dateTime" use="required" />
 
-    </xs:complexType>
-
-    <xs:complexType name="ChildrenType">
-        <xs:sequence>
-            <xs:element name="child" type="ChildType" minOccurs="0" maxOccurs="unbounded" />
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="ChildType">
-        <xs:sequence>
-            <xs:element name="childDataType" type="xs:string" />
-            <xs:element name="childId" type="xs:string" />
-            <xs:element name="childUrl" type="xs:anyURI" />
-            <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
-            <xs:element name="qualityAssured" type="qualityEnum" minOccurs="1" maxOccurs="1" />
-            <xs:element name="exists" type="existsEnum" minOccurs="1" maxOccurs="1" />
-        </xs:sequence>
     </xs:complexType>
 
     <xs:simpleType name="qualityEnum">
@@ -57,11 +41,4 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="existsEnum">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="NO" />
-            <xs:enumeration value="YES" />
-            <xs:enumeration value="UNKNOWN" />
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>
