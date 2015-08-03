@@ -24,7 +24,6 @@
     <xs:complexType name="DatasetType">
         <xs:sequence>
             <xs:element name="dataType" type="xs:string" />
-            <xs:element name="url" type="xs:anyURI" />
             <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
             <xs:element name="qualityAssured" type="qualityEnum" minOccurs="1" maxOccurs="1" />
             <xs:element name="restrictions" type="RestrictionsType" />
