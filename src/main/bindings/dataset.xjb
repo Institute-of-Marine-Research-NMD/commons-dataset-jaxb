@@ -10,7 +10,7 @@
     <!--
     This document is referenced from the pom and is used to change the generated classes.
     The following has been added. -->
-    <jxb:bindings schemaLocation="../resources/dataset.xsd" node="/xs:schema">
+    <jxb:bindings schemaLocation="../resources/datasetv1.xsd" node="/xs:schema">
         <jxb:globalBindings>
             <jxb:serializable uid="1" />
         </jxb:globalBindings>
@@ -18,7 +18,7 @@
             <jxb:package name="no.imr.nmd.commons.dataset.jaxb" />
         </jxb:schemaBindings>
         <jxb:bindings>
-            <namespace:prefix name="ds" />
+            <namespace:prefix name="" />
         </jxb:bindings>
 
         <jxb:bindings node="//xs:complexType[@name='DatasetsType']">
