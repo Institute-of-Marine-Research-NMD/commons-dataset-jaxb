@@ -54,6 +54,10 @@
             <xs:enumeration value="BIOTIC"/>
             <xs:enumeration value="CRUISE"/>
             <xs:enumeration value="ECHOSOUNDER"/>
+            <xs:enumeration value="CRUISESERIES"/>
+            <xs:enumeration value="SURVEYTIMESERIES"/>
+            <xs:enumeration value="STOX"/>
+            <xs:enumeration value="REFERENCE"/>
         </xs:restriction>
     </xs:simpleType>
 
