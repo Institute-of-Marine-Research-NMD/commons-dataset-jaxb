@@ -23,7 +23,7 @@
     -->
     <xs:complexType name="DatasetType">
         <xs:sequence>
-            <xs:element name="dataType" type="xs:string" />
+            <xs:element name="dataType" type="dataTypeEnum" />
             <xs:element name="datasetName" type="xs:string" minOccurs="0" maxOccurs="1"  />
             <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
             <xs:element name="qualityAssured" type="qualityEnum" minOccurs="1" maxOccurs="1" />
@@ -43,9 +43,17 @@
     </xs:complexType>
 
     <xs:simpleType name="qualityEnum">
-        <xs:restriction base="xs:string">
+        <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="NONE" />
             <xs:enumeration value="COMPLETE" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="dataTypeEnum">
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="BIOTIC"/>
+            <xs:enumeration value="CRUISE"/>
+            <xs:enumeration value="ECHOSOUNDER"/>
         </xs:restriction>
     </xs:simpleType>
 
